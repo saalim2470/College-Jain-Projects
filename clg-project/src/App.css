@@ -35,4 +35,25 @@
   to {
     transform: rotate(360deg);
   }
+
 }
+/* Center-aligns the brand name and logo in the Navbar */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+/* Ensures the login and register buttons are aligned properly */
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link .btn {
+  margin-left: 10px;
+}
+

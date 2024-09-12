@@ -1,0 +1,62 @@
+import React from 'react';
+import { Navbar, Nav, NavDropdown, Container, Button } from 'react-bootstrap';
+import logo from '../assests/logo.png'
+const Welcome = () => {
+    return (
+        <div>
+            <Navbar bg="light" expand="lg">
+                <Container>
+                    <Navbar.Brand href="#home">
+                        <img
+                            src={logo} // Replace with your logo
+                            alt="Brand Logo"
+                            className="d-inline-block align-top"
+                            style={{width:60,height:50}}
+                        />
+                        Travel Spot
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ml-auto ">
+                        <Nav.Item>
+                            <Nav.Link href="#home">Home</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#book">Book</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <NavDropdown title="Packages" id="basic-nav-dropdown">
+                                <NavDropdown.Item href="#usa">United States</NavDropdown.Item>
+                                <NavDropdown.Item href="#india">India</NavDropdown.Item>
+                                <NavDropdown.Item href="#france">France</NavDropdown.Item>
+                                <NavDropdown.Item href="#germany">Germany</NavDropdown.Item>
+                            </NavDropdown>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#services">Services</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#gallery">Gallery</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#about">About</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#login">
+                                <Button variant="outline-primary" className="mx-2">Login</Button>
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#register">
+                                <Button variant="primary">Register</Button>
+                            </Nav.Link>
+                        </Nav.Item>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </div>
+    );
+}
+
+export default Welcome;
