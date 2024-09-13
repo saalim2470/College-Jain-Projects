@@ -1,62 +1,52 @@
-import React from 'react';
-import { Navbar, Nav, NavDropdown, Container, Button } from 'react-bootstrap';
-import logo from '../assests/logo.png'
-const Welcome = () => {
-    return (
-        <div>
-            <Navbar bg="light" expand="lg">
-                <Container>
-                    <Navbar.Brand href="#home">
-                        <img
-                            src={logo} // Replace with your logo
-                            alt="Brand Logo"
-                            className="d-inline-block align-top"
-                            style={{width:60,height:50}}
-                        />
-                        Travel Spot
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ml-auto ">
-                        <Nav.Item>
-                            <Nav.Link href="#home">Home</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#book">Book</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <NavDropdown title="Packages" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#usa">United States</NavDropdown.Item>
-                                <NavDropdown.Item href="#india">India</NavDropdown.Item>
-                                <NavDropdown.Item href="#france">France</NavDropdown.Item>
-                                <NavDropdown.Item href="#germany">Germany</NavDropdown.Item>
-                            </NavDropdown>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#services">Services</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#gallery">Gallery</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#about">About</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#login">
-                                <Button variant="outline-primary" className="mx-2">Login</Button>
-                            </Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#register">
-                                <Button variant="primary">Register</Button>
-                            </Nav.Link>
-                        </Nav.Item>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </div>
-    );
-}
+import React, { useEffect, useState } from 'react'
+import { Button } from 'react-bootstrap';
 
-export default Welcome;
+export const Welcome = () => {
+    const countries = ['USA', 'Canada', 'Australia', 'Germany', 'India', 'Brazil'];
+    const [currentCountry, setCurrentCountry] = useState(0);
+  
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        setCurrentCountry((prevCountry) => (prevCountry + 1) % countries.length);
+      }, 200); 
+  
+      return () => clearInterval(intervalId);
+    }, [countries.length]);
+  return (
+    <div>
+    {/* Background Image Section */}
+    <div
+      style={{
+        backgroundImage: `url('https://t4.ftcdn.net/jpg/01/38/43/93/360_F_138439340_obSGtNAiU443XmNZNo59XVU7lculngeS.jpg')`, // Replace with your image URL
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '90vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        color: 'white',
+        textAlign: 'center',
+      }}
+    >
+      {/* Heading 1: Welcome to BrandName */}
+      <h1>Welcome to Travel Spot</h1>
+
+      {/* Heading 2: Dynamic country name */}
+      <h2 style={{ fontSize: '3rem', marginTop: '10px' }}>
+        Visit {countries[currentCountry]}
+      </h2>
+
+      {/* Button: Book Now */}
+      <Button
+        variant="primary"
+        size="lg"
+        style={{ marginTop: '20px' }}
+      >
+        Book Now
+      </Button>
+    </div>
+  </div>
+  )
+}
