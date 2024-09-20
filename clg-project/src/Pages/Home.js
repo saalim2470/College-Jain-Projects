@@ -5,7 +5,6 @@ import { Welcome } from "./Welcome";
 export const Home = () => {
   return (
     <>
-      <Header />
       <Welcome />
     </>
   );

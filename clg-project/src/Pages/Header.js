@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container, Button } from "react-bootstrap";
 import logo from "../assests/logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -21,10 +22,10 @@ const Header = () => {
             {/* Left side navigation items */}
             <Nav className="me-auto">
               <Nav.Item>
-                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link as={Link} to="/">Home</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="#book">Book</Nav.Link>
+                <Nav.Link as={Link} to="/booking">Book</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <NavDropdown title="Packages" id="basic-nav-dropdown">
