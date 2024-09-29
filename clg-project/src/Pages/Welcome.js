@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 export const Welcome = () => {
     const countries = ['USA', 'Canada', 'Australia', 'Germany', 'India', 'Brazil'];
     const [currentCountry, setCurrentCountry] = useState(0);
+    const navigate = useNavigate();
+
   
     useEffect(() => {
       const intervalId = setInterval(() => {
@@ -43,6 +46,7 @@ export const Welcome = () => {
         variant="primary"
         size="lg"
         style={{ marginTop: '20px' }}
+        onClick={()=>{navigate('/booking')}}
       >
         Book Now
       </Button>

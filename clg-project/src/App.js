@@ -3,6 +3,8 @@ import './App.css';
 import { Home } from './Pages/Home';
 import BookingForm from './Pages/BookingForm';
 import Header from './Pages/Header';
+import GalleryTab from './Pages/GalleryTab';
+import AboutUs from './Pages/AboutUs';
 
 function App() {
   return (
@@ -11,7 +13,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/booking" element={<BookingForm />} />
-      {/* <Route path="/services" element={<Services />} /> */}
+      <Route path="/gallery" element={<GalleryTab />} />
+      <Route path="/aboutUs" element={<AboutUs />} />
     </Routes>
   </Router>
   );
