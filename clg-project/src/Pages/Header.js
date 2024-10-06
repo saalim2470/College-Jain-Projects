@@ -3,7 +3,7 @@ import { Navbar, Nav, NavDropdown, Container, Button } from "react-bootstrap";
 import logo from "../assests/logo.png";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header =  ({ onRegisterClick,onLoginClick }) => {
   return (
     <div>
       <Navbar bg="light" expand="lg">
@@ -50,14 +50,14 @@ const Header = () => {
             <Nav className="ms-auto">
               <Nav.Item>
                 <Nav.Link href="#login">
-                  <Button variant="outline-primary" >
+                  <Button variant="outline-primary" onClick={onLoginClick} >
                     Login
                   </Button>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="#register">
-                  <Button variant="primary">Register</Button>
+              <Nav.Link>
+                  <Button variant="primary" onClick={onRegisterClick}>Register</Button>
                 </Nav.Link>
               </Nav.Item>
             </Nav>
