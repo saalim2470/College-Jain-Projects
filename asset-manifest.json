@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/College-Jain-Projects/static/css/main.8950a996.css",
-    "main.js": "/College-Jain-Projects/static/js/main.fe46e4e0.js",
+    "main.js": "/College-Jain-Projects/static/js/main.1340df4c.js",
     "static/js/453.ca51a8cb.chunk.js": "/College-Jain-Projects/static/js/453.ca51a8cb.chunk.js",
     "static/media/fa-solid-900.ttf": "/College-Jain-Projects/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/College-Jain-Projects/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
@@ -14,11 +14,11 @@
     "static/media/fa-v4compatibility.woff2": "/College-Jain-Projects/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/College-Jain-Projects/index.html",
     "main.8950a996.css.map": "/College-Jain-Projects/static/css/main.8950a996.css.map",
-    "main.fe46e4e0.js.map": "/College-Jain-Projects/static/js/main.fe46e4e0.js.map",
+    "main.1340df4c.js.map": "/College-Jain-Projects/static/js/main.1340df4c.js.map",
     "453.ca51a8cb.chunk.js.map": "/College-Jain-Projects/static/js/453.ca51a8cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8950a996.css",
-    "static/js/main.fe46e4e0.js"
+    "static/js/main.1340df4c.js"
   ]
 }
